@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // IMPORTANT: Replace 'REPO_NAME' with your actual GitHub repository name
-  // Example: If your repo is at https://github.com/yourname/ningbo-2025, change this to '/ningbo-2025/'
-  base: '/REPO_NAME/', 
+  // 使用相对路径 './' 作为基础路径
+  // 这样无论部署在根域名还是子目录（如 GitHub Pages）下，资源都能正确加载
+  base: './', 
 })
